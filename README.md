@@ -55,3 +55,6 @@ _Inventario de productos tipo API usando NodeJS y Express._
 - 💡  Mejor entendimiento de Promises y uso de Async/Await
 - 💬 Usar ChatGPT para hacer formularios rápidos
 - ⏱️ Diferencia entre asíncrono y tiempo real
+
+### Referencias 
+- [FreeCodeCamp: Aprende Node.js y Express - Curso desde Cero](https://youtu.be/1hpc70_OoAg)
