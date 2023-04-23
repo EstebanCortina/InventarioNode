@@ -1,3 +1,19 @@
+input[type=number]::-webkit-outer-spin-button,
+
+input[type=number]::-webkit-inner-spin-button {
+
+  -webkit-appearance: none;
+
+  margin: 0;
+
+}
+
+input[type=number] {
+
+  -moz-appearance: textfield;
+
+}
+
 body {
   background-color: azure;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -11,6 +27,7 @@ button {
 }
 
 input {
+
   width: 95%;
   margin-bottom: 10px;
 }
@@ -32,6 +49,10 @@ form {
 .flex {
   display: flex;
   flex-direction: column;
+}
+
+.text {
+  text-align: center;
 }
 
 .center {
