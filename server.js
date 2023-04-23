@@ -27,7 +27,8 @@ app.get('/', (req, res) => {
 });
 app.post('/', (req, res) => {
   console.log(req.body);
-  let product = new Producto(Inventario.listado().length, req.body.nombre, req.body.precio, req.body.cantidad);
+  let product = new Producto(Inventario.listado().length, req.body.nombre,
+    parseInt(req.body.precio), parseInt(req.body.cantidad));
   Inventario.addProduct(product);
   res.redirect('/');
 });
