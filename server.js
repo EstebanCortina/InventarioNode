@@ -1,21 +1,21 @@
 //Object
-const Inventario = require('../public/DB/inventario');
+const Inventario = require('./DB/inventario');
 
 //Class
-const Producto = require('../public/DB/productos');
+const Producto = require('./DB/productos');
 
 const path = require('path');
 const express = require('express');
 const app = express();
 
-const staticPath = path.join(__dirname, "../public");
+const staticPath = path.join(__dirname, "./public");
 app.use(express.static(staticPath));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Form page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views/index.html'));
+  res.sendFile(path.join(__dirname, './views/index.html'));
 });
 
 app.get('/productos', (req, res) => {
@@ -23,7 +23,12 @@ app.get('/productos', (req, res) => {
 })
 app.get('/productos/:id', (req, res) => {
   console.log(req.params.id);
-  res.json(Inventario.buscar(req.params.id));
+  let products = Inventario.buscar(req.params.id);
+  if (products === null) {
+    res.status(404);
+    res.send(`No existe el producto con id: ${req.params.id}`)
+  }
+  res.json(products);
 });
 
 app.post('/', (req, res) => {
