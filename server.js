@@ -1,8 +1,8 @@
 //Class
-const Producto = require('./DB/productosDB');
+const Producto = require('./DB/Inventario/productosDB');
 
 //Object
-const Inventario = require('./DB/inventarioDB');
+const Inventario = require('./DB/Inventario/inventarioDB');
 
 
 const express = require('express');

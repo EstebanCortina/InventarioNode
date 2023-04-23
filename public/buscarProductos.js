@@ -1,4 +1,4 @@
-const Inventario = require('../DB/inventarioDB');
+const Inventario = require('../DB/Inventario/inventarioDB');
 
 function buscarId(id) {
   return new Promise((resolve, reject) => {
